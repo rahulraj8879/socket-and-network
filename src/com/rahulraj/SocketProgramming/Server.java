@@ -24,6 +24,23 @@ public class Server {
           System.out.println("waiting for clients");
           Socket socket = serverSocket.accept();
           System.out.println("connected to client");
+		
+			// PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+			//       out.println("hello bhai jaan");
+
+
+			//       BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			//       String clientInput = input.readLine();
+			//       System.out.println(clientInput);
+			//       out.close();
+			//       input.close();
+			//       socket.close();
+		
+		
+		//comment below two lines if you want to run client.java other than clientThread
+		//also uncomment above lines..run the program and open cmd and type telnet localhost 9091
+		//then cmd will show u server msg printed and whatever u type and print will be show in  ide as client message
+		
           clientThread clientThread = new clientThread(socket);
           clientThread.start();
           System.out.println(clientcount);
