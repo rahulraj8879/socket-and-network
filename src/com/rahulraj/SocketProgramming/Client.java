@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 public class Client {
 
   public static void main(String[] args) {
-
+// first run server.java and note this is simple client for running multi threaded client run client thread class after servewr class
 
     try {
       InetAddress inetAddress = InetAddress.getByName("localhost");
